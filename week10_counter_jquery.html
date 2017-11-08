@@ -1,0 +1,26 @@
+<html>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        let count = 0;
+        // the anonymous function passed to `$(document).ready` is run when the page has loaded
+        $(document).ready(function() {
+            // set an even handler for the click event for all button elements
+            $("button").on("click", function() {
+                count++;
+                $("#message").html(`The button has been pressed ${count} times!`);
+            }).html("Click me!");
+            // set the inner html of the element with id "message"
+            $("#message").html("Press the button!");
+        });
+    </script>
+
+    <head>
+        <title>Week 10 Counter</title>
+    </head>
+    <body>
+        <h1>Counter</h1>
+        <p id="message"></p>
+        <button type="button"></button>
+        <button type="button"></button>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<html>
+    <script>
+        let count = 0;
+        function increment() {
+            count++;
+            let message = `Press the button! (${count})!`;
+            document.getElementById("message").innerHTML = message;
+        }
+    </script>
+    <head>
+        <title>Week 10 Counter</title>
+    </head>
+    <body>
+        <h1>Counter</h1>
+        <p id="message">Press the button!</p>
+        <button type="button" onclick="increment();">Click me!</button>
+    </body>
+</html>

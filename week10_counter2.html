@@ -1,0 +1,33 @@
+<html>
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            let message = `The button has been pressed ${count} times!`;
+            document.getElementById("message").innerHTML = message;
+        }
+
+        function init() {
+            let buttons = document.getElementsByClassName("btn");
+            for (let button of buttons) {
+                button.innerHTML = "Click me!";
+                button.addEventListener("click", increment);
+            }
+
+            document.getElementById("message").innerHTML = "Press the button!";
+        }
+
+        window.addEventListener("load", init);
+    </script>
+
+    <head>
+        <title>Week 10 Counter</title>
+    </head>
+    <body>
+        <h1>Counter</h1>
+        <p id="message"></p>
+        <button class="btn" type="button"></button>
+        <button class="btn" type="button"></button>
+    </body>
+</html>
